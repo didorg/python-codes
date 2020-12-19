@@ -31,3 +31,16 @@ print(iSet)
 # difference(): Return the difference of two or more sets as a new set.
 diffSet = mySet.difference(mySet3)
 print(diffSet)
+
+# symmetric_difference(): Return the symmetric difference of two sets as a new set
+simDiffSet = mySet.symmetric_difference(mySet3)
+print(simDiffSet)
+
+# issubset() & issuperset()
+print(mySet1.issubset(mySet))
+print(mySet.issuperset(mySet3))
+
+# ---------------------------------------------------------------------------------
+# frozenset
+# is an immutable version of a Set
+imtSet = frozenset([9, 8, 7, 6, 5])
