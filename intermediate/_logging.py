@@ -7,7 +7,7 @@ logging.warning('This is a warning message')
 logging.error('This is an error message')
 logging.critical('This is a critical message')
 
-
+# ************************************************************
 # The following example configures a very simple logger, a console handler, and a simple formatter using Python code:
 # create logger
 logger = logging.getLogger('simple_example')
@@ -32,3 +32,9 @@ logger.debug('debug message')
 logger.warning('warn message')
 logger.error('error message')
 logger.critical('critical message')
+# ************************************************************
+
+# ********************************************
+# python-json-logger
+# https://github.com/madzak/python-json-logger
+# ********************************************
