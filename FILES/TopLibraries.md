@@ -1,0 +1,46 @@
+# Top Python Libraries
+
+- Natural Language Processing (NLP)
+- Gensim
+- FlashText
+- Computer Vision (CV)
+- Graphical User Interface (GUI)
+- Tkinter
+- Wx Python
+- PyQt
+- PyGame
+- Pyglet
+- PyEngine3D
+- Requests
+- Lassie
+- Scrapy
+- Beautiful Soup
+- Zappa
+- Django (Heavy)
+- Flask
+- Numpy
+- Scipy
+- SymPy
+- Pandas
+- Matlotlib
+- Sql Alchemy
+- Plotly
+- scikit-learn
+- imbalanced-learn
+- theano
+- Bokeh
+- Pymc3
+- LightGBM
+- eli5
+- Keras
+- Tensorflow
+- PyTorch
+- Twisted
+- IPython
+- Pillow
+- Pywin32
+- Selenium
+- Pywhatkit
+- Kivy
+- Pendulum
+- Loguru
