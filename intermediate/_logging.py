@@ -1,4 +1,9 @@
+# from loguru import logger
+# loguru is a Library Ready to use out of the box without boilerplate
+# https://loguru.readthedocs.io/en/stable/index.html
 import logging
+
+
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S')
 
 logging.debug('This is a debug message')
