@@ -57,7 +57,8 @@ class Database:
         logger.info(f'Searching for {name} and {last_name}')
         # list 1
         print(f'------- By /{name}/ in Name -----------')
-        items = self.cur.execute("SELECT rowid, * FROM customers WHERE name LIKE ?", ('%' + name + '%',))
+        items = self.cur.execute("SELECT rowid, * FROM customers WHERE name LIKE ? ORDER BY last_name ASC",
+                                 ('%' + name + '%', ))
         for item in items:
             print(item)
         # list 2
