@@ -50,16 +50,27 @@ class Database:
         self.cur.execute("DELETE FROM customers WHERE rowid = (?)", id)
         self.commit_and_close()
 
+    # Query the Database ------------------------------------------------------------------------
     # Search custom by name
-    def search_name(self, name):
+    def custom_search(self, name, last_name):
         self.create_connection()
-        logger.info(f'Searching for {name}')
-        items = self.cur.execute("SELECT rowid, * FROM customers WHERE name LIKE ?", ('%'+name+'%',))
+        logger.info(f'Searching for {name} and {last_name}')
+        # list 1
+        print(f'------- By /{name}/ in Name -----------')
+        items = self.cur.execute("SELECT rowid, * FROM customers WHERE name LIKE ?", ('%' + name + '%',))
         for item in items:
             print(item)
+        # list 2
+        print(f'------- By /{name}/ in Name and /{last_name}/ in Last Name -----------')
+        name_and_last = self.cur.execute(
+            "SELECT rowid, * FROM customers WHERE name LIKE ? AND last_name LIKE ?",
+            ('%' + name + '%', '%' + last_name + '%'))
+        for item in name_and_last:
+            print(item)
+
         self.commit_and_close()
 
-    # Query the Database ------------------------------------------------------------------------
+    # Show All
     def show_all(self):
         self.create_connection()
         logger.info('Showing All')

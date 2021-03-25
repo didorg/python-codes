@@ -12,17 +12,17 @@ db = Database()
 # 2. Add Many records
 # add Many ------------------------
 # customer_list = [
-#     ('Adam', 'Pe', 'adamp@ng.com'),
-#     ('Lu', 'Shin', 'gao@lu.com'),
-#     ('Mari', 'Glez', 'mglez@edu.com')
+#     ('Pete', 'Lo', 'pete@ng.com'),
+#     ('Aldo', 'Lau', 'aldo@lu.com'),
+#     ('Mario', 'Glu', 'mglu@edu.com')
 # ]
 # db.add_many(customer_list)
 
 # Delete One record
 # db.delete_one('1')
 
-# Search custom by name
-# db.search_name("a")
+# Search custom by characters in name, last name
+db.custom_search('a', 'e')
 
 # Show All records
 # db.show_all()
