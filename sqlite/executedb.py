@@ -18,11 +18,15 @@ db = Database()
 # ]
 # db.add_many(customer_list)
 
+# Update
+# db.update_by_value('Gin', 'Mari')
+# db.update_by_id('Ana', 9)
+
 # Delete One record
 # db.delete_one('1')
 
 # Search custom by characters in name, last name
-db.custom_search('a', 'e')
+# db.custom_search('a', 'e')
 
 # Show All records
 # db.show_all()

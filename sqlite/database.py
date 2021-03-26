@@ -43,6 +43,22 @@ class Database:
         self.cur.executemany("""INSERT INTO customers VALUES (?, ?, ?)""", customer_list)
         self.commit_and_close()
 
+    # Update by an specific value
+    def update_by_value(self, to_set, to_compare):
+        self.create_connection()
+        logger.info(f'Updating Last Name of {to_compare} to {to_set}')
+        self.cur.execute("UPDATE customers SET last_name=? WHERE name = ?",
+                         (to_set, to_compare))
+        self.commit_and_close()
+
+    # Update by ID
+    def update_by_id(self, value, id):
+        self.create_connection()
+        logger.info(f'Updating by ID: {id}')
+        self.cur.execute("UPDATE customers SET name=? WHERE rowid = ?",
+                         (value, id))
+        self.commit_and_close()
+
     # Delete One record in the Database
     def delete_one(self, id):
         self.create_connection()
@@ -51,14 +67,14 @@ class Database:
         self.commit_and_close()
 
     # Query the Database ------------------------------------------------------------------------
-    # Search custom by name
+    # Search custom by name and last_name
     def custom_search(self, name, last_name):
         self.create_connection()
-        logger.info(f'Searching for {name} and {last_name}')
+        logger.info('Custom Search')
         # list 1
         print(f'------- By /{name}/ in Name -----------')
         items = self.cur.execute("SELECT rowid, * FROM customers WHERE name LIKE ? ORDER BY last_name ASC",
-                                 ('%' + name + '%', ))
+                                 ('%' + name + '%',))
         for item in items:
             print(item)
         # list 2
