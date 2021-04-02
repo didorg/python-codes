@@ -1,4 +1,7 @@
-__author__ = "didorg"
+# Bibliography
+# https://theautomationzone.blogspot.com/
+# https://www.youtube.com/watch?v=NhG__BL8zFo&ab_channel=AutomationZone
+
 # selenium
 from selenium import webdriver
 
