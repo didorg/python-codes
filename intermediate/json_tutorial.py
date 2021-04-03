@@ -21,11 +21,15 @@ with open('../FILES/car.json', 'r') as file:
     print(car)
 
 #  Using Requests: ********************************************************************************************
-# site: https://jsonplaceholder.typicode.com/
+# sites:
+# https://jsonplaceholder.typicode.com/
+# https://docs.python-requests.org/en/master/
+
 response = requests.get('https://jsonplaceholder.typicode.com/users')
 # print(response.ok) // True
 # print(response.status_code) // 200
+# print(response.headers['Content-Type'])  # application/json; charset=utf-8
+# print(response.headers.get('content-type'))  # application/json; charset=utf-8
 
 # Response in json format
 users_json = response.json()
-
