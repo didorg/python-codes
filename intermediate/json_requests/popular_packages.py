@@ -45,5 +45,5 @@ t2 = time.perf_counter()
 print(f" *--- Finished in {t2-t1} seconds ---*")
 
 # dump(): Serialize obj as a JSON formatted stream to fp
-with open('../FILES/package_info.json', 'w') as file:
+with open('../../FILES/package_info.json', 'w') as file:
     json.dump(data_results, file, indent=2)
