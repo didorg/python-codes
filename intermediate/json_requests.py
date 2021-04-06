@@ -7,6 +7,8 @@ packages_json = r.json()
 
 count = 0
 data_results = []
+# A way to get accurate times in Python
+t1 = time.perf_counter()
 for package in packages_json:
     # pack_str = json.dumps(packs_json, indent=2)
     pack_name = package['name']
@@ -16,9 +18,6 @@ for package in packages_json:
     # For particular package
     response = requests.get(pack_url)
     package_json = response.json()
-    # print(type(package_json))
-    # first_package_str = json.dumps(package_json, indent=2)
-    # print(first_package_str)
 
     installs_30 = package_json['analytics']['install_on_request']['30d'][pack_name]
     installs_90 = package_json['analytics']['install_on_request']['90d'][pack_name]
@@ -32,15 +31,18 @@ for package in packages_json:
             '90d': installs_90,
             '365d': installs_365
         }
-
     }
 
     data_results.append(data)
     time.sleep(response.elapsed.total_seconds())
+    print(f" Got {pack_name} in {response.elapsed.total_seconds()} seconds")
     count += 1
     # Just 5 time for test
     if count >= 5:
         break
+
+t2 = time.perf_counter()
+print(f" *--- Finished in {t2-t1} seconds ---*")
 
 # dump(): Serialize obj as a JSON formatted stream to fp
 with open('../FILES/package_info.json', 'w') as file:
