@@ -1,5 +1,5 @@
 # List Comprehension *************************************************************
-nums = [1, 2, 3, 4, 5, 6, 7, 8]
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10]
 
 # I want 'n*n' for each 'n' in nums
 # Normal for
@@ -38,3 +38,21 @@ heroes = ['Batman', 'Superman', 'Wolverine']
 # # Dict Comprehension
 heroes_dict = {name: hero for name, hero in zip(names, heroes) if name != 'Peter'}
 print(heroes_dict)
+
+# Set Comprehension ***************************************************************
+my_set = {n * n for n in nums}
+# print(type(my_set)) R/ <class 'set'>
+print(my_set)  # R/ {64, 1, 4, 36, 100, 9, 16, 49, 81, 25}
+
+# Generators Comprehension ***************************************************************
+# def gen_func(nums):
+#     for n in nums:
+#         yield n * n
+#
+# my_gen = gen_func(nums)
+
+my_gen = (n * n for n in nums)
+# print(type(my_gen)) R/ <class 'generator'>
+
+for i in my_gen:
+    print(i)
