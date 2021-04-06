@@ -83,7 +83,3 @@ copy1 = numbers.copy()  # Result: [1, 2, 3, 4, 5, 6, 7, 8]
 copy2 = numbers[:]      # Result: [1, 2, 3, 4, 5, 6, 7, 8]
 copy3 = list(numbers)   # Result: [1, 2, 3, 4, 5, 6, 7, 8]
 
-# List Comprehension
-lc = [i*i for i in numbers]
-print(numbers)
-print(lc)
