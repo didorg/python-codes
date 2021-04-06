@@ -11,12 +11,12 @@ db = Database()
 
 # 2. Add Many records
 # add Many ------------------------
-customer_list = [
-    ('Pete', 'Lo', 'pete@ng.com'),
-    ('Aldo', 'Lau', 'aldo@lu.com'),
-    ('Mario', 'Glu', 'mglu@edu.com')
-]
-db.add_many(customer_list)
+# customer_list = [
+#     ('Pete', 'Lo', 'pete@ng.com'),
+#     ('Aldo', 'Lau', 'aldo@lu.com'),
+#     ('Mario', 'Glu', 'mglu@edu.com')
+# ]
+# db.add_many(customer_list)
 
 # Update
 # db.update_by_value('Gin', 'Mari')
