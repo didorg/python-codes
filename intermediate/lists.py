@@ -1,4 +1,5 @@
 # Lists: ordered, mutable, allows duplicate elements
+from intermediate.utils.person import Person
 
 myList = ['apple', 'mango', 'cherry']
 
@@ -30,6 +31,21 @@ print(myList)
 # Return a new list containing all items from the iterable in ascending order.
 s_list = sorted(myList)
 print(s_list)
+
+# Sort obj list --------------------------
+p1 = Person('Anne', 'Musk', 25)
+p2 = Person('Peter', 'Glez', 31)
+p3 = Person('Mari', 'Lu', 28)
+person_list = [p1, p2, p3]
+
+# for more complicated sort...
+# def p_sort(p):
+#     return p.age
+
+print('Sorted by name')
+s_p_list = sorted(person_list, key=lambda p: p.age, reverse=True)
+print(s_p_list)
+# ----------------------------------------
 
 multi_List = [1] * 3
 num_list = [0, 2, 3]
@@ -80,6 +96,5 @@ print(r)
 
 # Copy Original List
 copy1 = numbers.copy()  # Result: [1, 2, 3, 4, 5, 6, 7, 8]
-copy2 = numbers[:]      # Result: [1, 2, 3, 4, 5, 6, 7, 8]
-copy3 = list(numbers)   # Result: [1, 2, 3, 4, 5, 6, 7, 8]
-
+copy2 = numbers[:]  # Result: [1, 2, 3, 4, 5, 6, 7, 8]
+copy3 = list(numbers)  # Result: [1, 2, 3, 4, 5, 6, 7, 8]
