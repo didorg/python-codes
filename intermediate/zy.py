@@ -1,8 +1,18 @@
-customer_list = [
-    ('Pete', 'Lo', 'pete@ng.com'),
-    ('Aldo', 'Lau', 'aldo@lu.com'),
-    ('Mario', 'Glu', 'mglu@edu.com')
-]
+def split_value(day_rang, idx):
+    arr = [x for x in day_rang.split(" - ")]
+    return arr[idx]
 
-print(type(customer_list))
-print(customer_list)
+
+
+day_rang = '133.34 - 135.47'
+
+low = split_value(day_rang, 0)
+high = split_value(day_rang, 1)
+vol = '68,710,681'
+result = vol.replace(',', '')
+fl = float(result)
+print(fl)
+print(type(fl))
+
+
+
