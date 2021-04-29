@@ -21,7 +21,7 @@ def cal_cube(num):  # define a cube calculating function
     for n in num:  # for loop
         time.sleep(0.3)  # at each iteration it waits for 0.3 time
         print(" Calculate the cube of  the given number")
-        print(f'{current_thread().name}')
+        print(f' {current_thread().name}')
         print(" Cube is : ", n * n * n)
 
 
@@ -29,9 +29,9 @@ def cal_cumbia(num):  # define a cube calculating function
     for n in num:  # for loop
         time.sleep(3)  # at each iteration it waits for 0.3 time
         print("###################################")
-        print(f'{current_thread().name}')
+        print(f' {current_thread().name}')
         print(" Calculate the Cumbia of  the given number")
-        print(f"Cumbia is : {n * n * n * n} ######")
+        print(f" Cumbia is : {n * n * n * n} ######")
         print("###################################")
 
 
@@ -54,7 +54,7 @@ try:
         th2.join()
         th3.join()
         if split_hrs(current_time) > split_hrs(finish_time):
-            print(" Again executing the main thread... ")
+            print("Again executing the main thread... ")
             break
 except Exception as e:
     raise
