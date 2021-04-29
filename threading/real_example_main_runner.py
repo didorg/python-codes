@@ -10,16 +10,16 @@ def split_hrs(s):
 
 def cal_sqre(num):  # define a square calculating function
     for n in num:  # Use for loop
+        time.sleep(0.5)  # at each iteration it waits for 0.3 time
         print(" Calculate the square root of the given number")
         print(' Square is : ', n * n)
-        time.sleep(0.5)  # at each iteration it waits for 0.3 time
 
 
 def cal_cube(num):  # define a cube calculating function
     for n in num:  # for loop
+        time.sleep(0.3)  # at each iteration it waits for 0.3 time
         print(" Calculate the cube of  the given number")
         print(" Cube is : ", n * n * n)
-        time.sleep(0.3)  # at each iteration it waits for 0.3 time
 
 
 def cal_cumbia(num):  # define a cube calculating function
@@ -34,7 +34,7 @@ def cal_cumbia(num):  # define a cube calculating function
 try:
     start = time.perf_counter()
     ar = [4, 5, 6, 7, 2]  # given array
-    finish_time = finish_time = '20:05:00'
+    finish_time = finish_time = '20:16:00'
     print("Starting Threads... ")
     while True:
         now = datetime.now()
